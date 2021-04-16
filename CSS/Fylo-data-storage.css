@@ -1,0 +1,246 @@
+/* Start Variables*/
+
+:root {
+    --main-color: hsl(228, 56%, 26%);
+    --secondary-color: hsl(229, 57%, 11%);
+}
+
+/* End Variables*/
+
+/* Start General Rules */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: 14px;
+    background-color: var(--secondary-color);
+    font-family: 'Raleway', sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Small Screen */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium Screen */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large Screen */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* End General Rules */
+
+/* Start Fylo */
+
+.main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.main .container .fylo {
+    width: 30%;
+    padding: 30px;
+    border-radius: 5px 70px 5px 5px;
+    background-color: var(--main-color);
+}
+
+.main .container .fylo .logo img {
+    width: 100px;
+}
+
+.main .container .fylo ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    margin-top: 25px;
+    padding: 0;
+}
+
+.main .container .fylo ul li {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    background-color: var(--secondary-color);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.main .container .fylo ul li img {
+    width: 20px;
+}
+
+@media (max-width: 375px) {
+    .main .container {
+        width: 350px;
+        flex-direction: column;
+        padding: 0 20px;
+        margin-top: 50px;
+    }
+
+    .main .container .fylo {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .main {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+}
+/* End Fylo */
+
+/* Start Progress */
+
+.main .container .progress {
+    position: relative;
+    width: 65%;
+    padding: 15px 30px;
+    border-radius: 10px;
+    background-color: var(--main-color);
+}
+
+.main .container .progress p:first-of-type {
+    color: hsl(229, 7%, 55%);
+}
+
+.main .container .progress p:first-of-type span {
+    color: hsl(243, 100%, 93%);
+}
+
+.main .container .progress .prog {
+    background-color: var(--secondary-color);
+    width: 100%;
+    border-radius: 10px;
+}
+
+.main .container .progress .prog span {
+    position: relative;
+    display: block;
+    width: 75%;
+    height: 15px;
+    border-radius: 10px;
+    background-image: linear-gradient(to right,hsl(6, 100%, 80%),hsl(335, 100%, 65%) );
+}
+
+.main .container .progress .prog span::after {
+    content: "";
+    position: absolute;
+    top: 2.5px;
+    right: 2.5px;
+    background-color: #fff;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.main .container .progress p:last-of-type {
+    display: flex;
+    justify-content: space-between;
+    color: hsl(243, 100%, 93%);
+}
+
+.main .container .progress .pop {
+    position: absolute;
+    right: 30px;
+    top: -30px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px 10px 0 10px;
+    display: flex;
+    align-items: center;
+    color: hsl(229, 7%, 55%);
+}
+
+.main .container .progress .pop::after {
+    content: "";
+    position: absolute;
+    top: calc(50% + 10px);
+    right: 0;
+    border: 15px solid;
+    border-color: transparent white transparent transparent;
+}
+
+.main .container .progress .pop  span {
+    font-size: 25px;
+    font-weight: 700;
+    margin-right: 10px;
+    color: black;
+}
+
+@media (max-width: 375px) {
+    .main .container .progress {
+        width: 100%;
+    }
+
+    .main .container .progress .pop {
+        right: 90px;
+        top: 100px;
+        border-radius: 10px 10px 10px 10px;
+    }
+    
+    .main .container .progress .pop::after {
+        display: none;
+    }
+}
+
+/* End Progress */
+
+/* Start Background */
+
+body {
+    background-image: url("../images/bg-desktop.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+@media (max-width: 767px) {
+    
+body {
+    background-image: url("../images/bg-mobile.png");
+}
+}
+/* End Background */
+
+
+.color{
+
+    /* gradient */
+    color: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+
+    /* Others */
+    color: 
+    hsl(243, 100%, 93%)
+    hsl(229, 7%, 55%)
+    hsl(228, 56%, 26%)
+    hsl(229, 57%, 11%);
+}
